@@ -4,6 +4,8 @@ using DataAccess.Repository.CartRepository;
 using DataAccess.Repository.MemberRepository;
 using DataAccess.Repository.OrderDetailRepo;
 using DataAccess.Repository.ProductRepository;
+using SalesWinApp.MemberUI;
+using SalesWinApp.OrderUI;
 using SalesWinApp.Presenter;
 
 namespace SalesWinApp.ProductUI
