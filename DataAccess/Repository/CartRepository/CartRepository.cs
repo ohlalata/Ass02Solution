@@ -3,7 +3,7 @@ using DataAccess.DAO;
 
 namespace DataAccess.Repository.CartRepository
 {
-    public class CartRepository
+    public class CartRepository : ICartRepository
     {
         public void AddToCart(int productId, int quantity, decimal price) => CartDAO.GetCartDao.AddToCart(productId, quantity, price);
 
