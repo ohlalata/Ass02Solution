@@ -18,5 +18,28 @@ namespace SalesWinApp.CategoryUI
         {
             InitializeComponent();
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string categoryName = txtCategoryName.Text.Trim();
+            try
+            {
+                if (categoryName == String.Empty)
+                {
+                    throw new FormatException("Categogy name can't empty!");
+                }
+                else
+                {
+                    CategoryRepository.AddCategory(categoryName);
+                    MessageBox.Show(@"Add Category with the name: " + categoryName + @" successfully!!", @"Add new Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Add new Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.None;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e) => Close();
     }
 }
