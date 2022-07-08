@@ -1,4 +1,6 @@
-﻿namespace SalesWinApp.OrderUI
+﻿using System.ComponentModel;
+
+namespace SalesWinApp.OrderUI
 {
     partial class FormOrdersManagement
     {
