@@ -24,7 +24,6 @@ namespace SalesWinApp.OrderUI
         public FormViewCart()
         {
             InitializeComponent();
-
         }
 
         private void CreateMainMenu()
