@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
+#nullable disable
+
 namespace BusinessObject
 {
     public partial class SalesManagementContext : DbContext

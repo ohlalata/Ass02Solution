@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace BusinessObject
 {
-    public class MySalesMangementContext : DbContext
+    public partial class SalesManagementContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
