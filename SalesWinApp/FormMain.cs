@@ -1,6 +1,9 @@
 ﻿using DataAccess.Repository.CartRepository;
 using DataAccess.Repository.MemberRepository;
+using SalesWinApp.MemberUI;
+using SalesWinApp.OrderUI;
 using SalesWinApp.Presenter;
+using SalesWinApp.ProductUI;
 
 namespace SalesWinApp
 {
@@ -14,6 +17,47 @@ namespace SalesWinApp
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void buttonMemberManagement_Click(object sender, EventArgs e)
+        {
+            FormMembersManagement formMembersManagement = new FormMembersManagement
+            {
+                LoginMember = MemberLogin,
+                IsAdminLogin = IsAdminLogin,
+                IsMemberLogin = IsMemberLogin
+
+            };
+            formMembersManagement.Closed += (_, _) => this.Close();
+            this.Hide();
+            formMembersManagement.Show();
+        }
+
+        private void buttonProductManagement_Click(object sender, EventArgs e)
+        {
+            FormProductsManagement formProductsManagement = new FormProductsManagement()
+            {
+                IsAdminLogin = true,
+                MemberRepository = this.MemberRepository
+            };
+            formProductsManagement.Closed += (_, _) => this.Close();
+            this.Hide();
+            formProductsManagement.Show();
+        }
+
+        private void buttonOrderManagement_Click(object sender, EventArgs e)
+        {
+            FormOrdersManagement formOrdersManagement = new FormOrdersManagement
+            {
+                MemberRepository = this.MemberRepository,
+                CartRepository = this.CartRepository,
+                IsAdminLogin = this.IsAdminLogin,
+                IsMemberLogin = this.IsMemberLogin,
+                MemberLogin = this.IsMemberLogin ? this.MemberLogin : null,
+            };
+            formOrdersManagement.Closed += (_, _) => this.Close();
+            this.Hide();
+            formOrdersManagement.Show();
         }
     }
 }
