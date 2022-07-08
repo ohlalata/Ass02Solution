@@ -3,7 +3,7 @@ using DataAccess.DAO;
 
 namespace DataAccess.Repository.OrderRepository
 {
-    public class OrderRepository
+    public class OrderRepository : IOrderRepository
     {
         public Order AddOrder(Order order) => OrderDAO.GetOrderDao.AddOrder(order);
 
