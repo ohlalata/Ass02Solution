@@ -3,7 +3,7 @@ using DataAccess.DAO;
 
 namespace DataAccess.Repository.MemberRepository
 {
-    public class MemberRepository
+    public class MemberRepository : IMemberRepository
     {
         public bool IsAdminLogin(string email, string password) => MemberDAO.GetMemberDao.IsAdminLogin(email, password);
         public void AddMember(Member member) => MemberDAO.GetMemberDao.AddMember(member);

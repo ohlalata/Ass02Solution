@@ -1,4 +1,9 @@
 ﻿using AutoMapper;
+using BusinessObject;
+using DataAccess.Repository.CategoryRepository;
+using DataAccess.Repository.MemberRepository;
+using DataAccess.Repository.OrderDetailRepo;
+using DataAccess.Repository.ProductRepository;
 
 namespace SalesWinApp.Presenter
 {

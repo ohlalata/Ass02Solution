@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DataAccess.Repository.CartRepository;
+using DataAccess.Repository.MemberRepository;
+using SalesWinApp.Presenter;
 
 namespace SalesWinApp
 {
     public partial class FormMain : Form
     {
+        public IMemberRepository MemberRepository { get; init; }
+        public ICartRepository CartRepository { get; init; }
+        public bool IsAdminLogin { get; init; }
+        private bool IsMemberLogin { get; set; } = false;
+        private MemberPresenter MemberLogin { get; set; }
         public FormMain()
         {
             InitializeComponent();
