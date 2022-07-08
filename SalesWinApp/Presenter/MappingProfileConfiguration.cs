@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalesWinApp.Presenter
 {
-    internal class MappingProfileConfiguration
+    public class MappingProfileConfiguration
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalesWinApp.Presenter
 {
-    internal class CartPresenter
+    public class CartPresenter
     {
     }
 }
