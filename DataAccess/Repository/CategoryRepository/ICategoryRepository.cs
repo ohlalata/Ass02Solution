@@ -1,6 +1,12 @@
-﻿namespace DataAccess.Repository.CategoryRepository
+﻿using BusinessObject;
+
+namespace DataAccess.Repository.CategoryRepository
 {
-    public class ICategoryRepository
+    public interface ICategoryRepository
     {
+        public IEnumerable<Category> GetCategoryList();
+        public Category GetCategory(int categoryId);
+        public Category GetCategory(string categoryName);
+        public void AddCategory(string categoryName);
     }
 }
