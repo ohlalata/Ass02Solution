@@ -42,7 +42,7 @@ namespace DataAccess.DAO
                 IEnumerable<OrderDetail> orderDetails = context.OrderDetails.Where(od => od.OrderId == orderId);
                 foreach (var orderDetail in orderDetails)
                 {
-                    orderTotal += orderDetail.UnitPrice * (1 - Convert.ToDecimal(orderDetail.Discount));
+                    orderTotal += orderDetail.UnitPrice * orderDetail.Quantity;
                 }
             }
             catch (Exception ex)
